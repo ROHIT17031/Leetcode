@@ -6,7 +6,7 @@ class Solution {
     int maxc = 0;
     while(s<l){
     maxc += piles[l-1];
-    s++;
+    s++;                    //TC O(nlogN)
     l -=2;
 
 
