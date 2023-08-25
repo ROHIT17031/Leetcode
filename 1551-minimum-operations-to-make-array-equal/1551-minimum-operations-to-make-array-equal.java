@@ -11,12 +11,29 @@ class Solution {
     //       minop += rem/2;
     // }
     // return minop;
-          int mid = n/2;
-   int minop = 0;
-    for(int i = 0; i<n; i++){
+        
+        //--------------------------------------------
+//           int mid = n/2;
+//    int minop = 0;
+//     for(int i = 0; i<n; i++){
     
-     minop += (Math.abs(mid-i)); // no extera space used so optimization
-    }
-    return minop;
-    }
+//      minop += (Math.abs(mid-i)); // no extera space used so optimization
+//     }                        tc O(n)
+//     return minop;
+        
+        //--------------------------------------------
+        
+          int ans = 0;
+        
+  if (n % 2 == 0) {
+      ans = (n / 2) * (n / 2);
+  } else {
+      ans = ((n - 1) / 2) * ((n + 1) / 2);     //tc O(1)
+  }
+  
+  return ans;
+        
+  }
+        
+    
 }
