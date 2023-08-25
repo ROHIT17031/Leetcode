@@ -15,7 +15,7 @@ class Solution {
    int minop = 0;
     for(int i = 0; i<n; i++){
     
-     minop += (Math.abs(mid-i));
+     minop += (Math.abs(mid-i)); // no extera space used so optimization
     }
     return minop;
     }
