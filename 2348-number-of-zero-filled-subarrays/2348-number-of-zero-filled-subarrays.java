@@ -7,7 +7,8 @@ class Solution {
         count = 1;
       }
       else{
-        maxsub +=count;
+        maxsub +=count;   //tc O(n)
+                          // 100% faster
         count++;
 
       }
