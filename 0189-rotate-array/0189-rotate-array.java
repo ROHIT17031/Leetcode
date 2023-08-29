@@ -1,33 +1,23 @@
 class Solution {
     public void rotate(int[] nums, int k) {
-           if(k>nums.length){
-            k = k%nums.length;
-        }
+   k= k%nums.length;
+     int ans [] = new int[nums.length];
+     int i = 0;
+     int n = nums.length-k;
+     for (int j = n; j < nums.length; j++) {
+        ans[i++] = nums[j];
         
-        int arrk []= new int[k];
-        int arrk_nums [] = new int[nums.length-k];
-        int j = nums.length-k;
-        int start = 0;
-        for(int i = 0; i<nums.length; i++){
-            if(i<k){
-                arrk[i] = nums[j++];
-            }
-            else{
-                arrk_nums[start] = nums[start];
-                start++;
-            }
+     }
 
-        }
-        start = 0;
-        j = 0;
-        for(int i = 0; i<nums.length; i++){
-            if(i<arrk.length){
-                nums[i] = arrk[start++];
-            }
-            else{
-                nums[i] = arrk_nums[j++];
-            }
-
-        }
+     for(int j = 0; j<nums.length-k; j++){
+        ans[i++] = nums[j];
+     }
+   for( i = 0; i<ans.length; i++){
+    System.out.print(ans[i] + " ");
+   }
+   for(int j = 0; j<ans.length; j++){
+    nums[j] = ans[j];
+   }
+  
     }
 }
