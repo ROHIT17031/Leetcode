@@ -13,7 +13,7 @@ class Solution {
 
  }
  public static void reverse(int nums[], int start, int end){
-    // While start index is less than end index
+    
     while(start < end){
         // Swap elements at start and end indices
         int temp = nums[start];
